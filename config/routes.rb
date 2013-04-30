@@ -5,5 +5,6 @@ Zhouster::Application.routes.draw do
 
 	root to: "homes#show"
 
-	resource :dashboard, only: [:show]  
+	resource :dashboard, only: [:show]
+	resources :shouts, only: [:create]  
 end
