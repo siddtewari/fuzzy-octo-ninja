@@ -6,5 +6,10 @@
 <% end %>
 
 <% @shouts.each do |shout| %>
-  <div><%= shout.body %></div>
+  <div>
+  	<%= shout.user.email %> shouted
+    <p><%= shout.body %></p>
+    <%= time_ago_in_words(shout.created_at) %>
+    <hr />
+  </div>
 <% end %>
