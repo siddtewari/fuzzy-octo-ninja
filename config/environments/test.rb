@@ -34,4 +34,8 @@ Zhouster::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  # Configure the mailer to create full URLs in emails:
+  # config/environments/{development,test}.rb
+    config.action_mailer.default_url_options = { :host => 'example.com' }
 end
