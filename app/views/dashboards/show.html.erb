@@ -1,6 +1,6 @@
 <h1>Dashboard</h1>
 
-<%= form_for @shout do |form| %>
+<%= form_for @text_shout do |form| %>
   <%= form.text_field :body, placeholder: "Shout here" %>
   <%= form.submit "Shout!" %>
 <% end %>
@@ -8,7 +8,7 @@
 <% @shouts.each do |shout| %>
   <div>
   	<%= shout.user.email %> shouted
-    <p><%= shout.body %></p>
+    <%= render shout.content %>
     <%= time_ago_in_words(shout.created_at) %>
     <hr />
   </div>
